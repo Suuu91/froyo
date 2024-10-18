@@ -7,14 +7,14 @@ const flavorarray = userInput.split(`,`)
 //create emtpy object
 let froyoFlavor = {}
 
-//use for loop to go through every element in array, and set the elements as the key of the object
+//use for loop to go through every element in array
 for( let i=0; i<flavorarray.length; i++){
-  froyoFlavor[flavorarray[i]] = 0
-}
-
-//go through the elemnts in array again and add value by 1 each time the key duplicate
-for( let i=0; i<flavorarray.length; i++){
+//use conditional statements to let froyoflavor=1 or ++
+  if (!froyoFlavor[flavorarray[i]]) {
+    froyoFlavor[flavorarray[i]] = 1
+  } else{
   froyoFlavor[flavorarray[i]]++
+  }
 }
 
 console.log(froyoFlavor)
